@@ -1,12 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>spaxMama</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>spaxMama</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: black;
+      color: white;
+      font-family: "Times New Roman", serif;
+      min-height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .logo {
+      position: absolute;
+      top: 32px;
+      left: 32px;
+      font-size: 22px;
+      letter-spacing: -0.5px;
+    }
+
+    .contact {
+      position: absolute;
+      left: 32px;
+      top: 35%;
+      display: flex;
+      gap: 48px;
+      align-items: center;
+      font-size: 18px;
+    }
+
+    .contact a {
+      color: white;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      transition: opacity 0.2s ease;
+    }
+
+    .contact a:hover {
+      opacity: 0.7;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 24px;
+      right: 32px;
+      font-size: 12px;
+      letter-spacing: -0.2px;
+    }
+
+    @media (max-width: 768px) {
+      .logo {
+        font-size: 18px;
+        top: 24px;
+        left: 24px;
+      }
+
+      .contact {
+        left: 24px;
+        top: 38%;
+        gap: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 16px;
+      }
+
+      .footer {
+        right: 24px;
+        bottom: 20px;
+        font-size: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="logo">
+    spaxMama
+  </div>
+
+  <div class="contact">
+    <span>Kontakt:</span>
+
+    <a href="mailto:mail@spaxmama.org">
+      mail@spaxmama.org
+    </a>
+  </div>
+
+  <div class="footer">
+    ©spaxMama 2026, Graz
+  </div>
+
+</body>
 </html>
